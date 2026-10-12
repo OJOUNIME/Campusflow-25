@@ -47,8 +47,6 @@ Each line restored; 31 passing again.
 
 **Decision:** Improved. AI predicted 1 failure (2 happened) and 3 errors (4 happened). I trusted my output.
 
-**Related file/commit:** `tests/test_reports.py`, `campusflow/reports.py`, <PR link>
-
 **What I can now explain without AI:** Passing tests don't prove good tests, so I break the code on purpose. FAIL = wrong assertion; ERROR = unexpected crash.
 
 ---
@@ -69,8 +67,6 @@ Each line restored; 31 passing again.
 
 **Decision:** Accepted, after checking the design file.
 
-**Related file/commit:** `campusflow/workflow.py`, `tests/test_workflow.py`, <PR link>
-
 **What I can now explain without AI:** Modules from two people only fit if they share exact field names, and test helpers must follow the agreed shape.
 
 ---
@@ -85,12 +81,8 @@ Each line restored; 31 passing again.
 
 **Useful AI guidance:** Dicts keep insertion order (Python 3.7+); sets don't. `ALLOWED_TRANSITIONS` is a dict, `VALID_STATUSES` is a set.
 
-**My independent experiment/test:** <python3 -c lines, prediction, what you saw>. Wrote `test_keys_are_in_workflow_order`; 31 tests passed.
-
 **Verification source or result:** Test output.
 
 **Decision:** Corrected my own misunderstanding; kept the dicts and added the test.
-
-**Related file/commit:** `campusflow/reports.py`, `tests/test_reports.py`, <PR link>
 
 **What I can now explain without AI:** Dicts keep order, sets don't, and `assertEqual` on dicts ignores order, so an order test compares lists of keys.
